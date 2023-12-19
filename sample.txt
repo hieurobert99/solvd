@@ -1,0 +1,4 @@
+This is a sample text file.
+It contains some words and sentences.
+The goal is to count the number of unique words.
+Each word may appear more than once.

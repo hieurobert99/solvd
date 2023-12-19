@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.time.LocalTime;
 import java.util.*;
+import java.util.function.*;
 
 //Represents the basic structure of a hospital, containing attributes like name and location.
 //Provides a general view of a hospital.
@@ -71,6 +72,31 @@ public final class Hospital extends Building implements HospitalInterface {
         }
          return null;
     }
+
+    public List<Doctor> filterDoctorsByAge(int ageThreshold) {
+        Predicate<Doctor> filterByAge = doctor -> doctor.getAge() > ageThreshold;
+        return staffList.stream().filter(filterByAge).toList();
+    }
+
+    public List<String> mapPatientNamesToUpperCase() {
+        Function<Patient, String> toUpperCaseName = patient -> patient.getName().toUpperCase();
+        return patientList.stream().map(toUpperCaseName).toList();
+    }
+    public void printDoctorDetails() {
+        Consumer<Doctor> printDoctorDetails = doctor -> System.out.println(doctor.getName() + ": " + doctor.getSpecialization());
+        doctorList.forEach(printDoctorDetails);
+    }
+
+    public Patient generateNewPatient() {
+        Supplier<Patient> createNewPatient = () -> new Patient("New", "Patient", 30, Gender.MALE, "P-0002");
+        return createNewPatient.get();
+    }
+    public int incrementPatientAge(int currentAge) {
+        UnaryOperator<Integer> incrementByFive = age -> age + 5;
+        return incrementByFive.apply(currentAge);
+    }
+
+
 
     @Override
     public String toString() {
