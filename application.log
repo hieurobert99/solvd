@@ -1,0 +1,60 @@
+2023-11-21 22:58:16,958 INFO i.w.Staff [main] Hospital: Medicover in Warsaw, Aleje Jerozolimskie 123
+2023-11-21 22:58:16,991 INFO i.w.Staff [main] Dr. John had been hired as a Doctor!
+2023-11-21 22:58:16,991 INFO i.w.Staff [main] Dr. Emma had been hired as a Doctor!
+2023-11-21 22:58:16,992 INFO i.w.Staff [main] Peter had been hired as a Staff!
+2023-11-21 22:58:16,992 INFO i.w.Staff [main] Leila had been hired as a Staff!
+2023-11-21 22:58:16,992 INFO i.w.Staff [main] Dr. Alex had been hired as a Doctor!
+2023-11-21 22:58:17,002 INFO i.w.Staff [main] Dr. John's available slots: {THURSDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], MONDAY=[15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00, 22:00], SUNDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], FRIDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00]}
+2023-11-21 22:58:17,004 INFO i.w.Staff [main] Dr. Emma's available slots: {MONDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], TUESDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], SUNDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00]}
+2023-11-21 22:58:17,004 INFO i.w.Staff [main] Dr. Alex's available slots: {SATURDAY=[06:00, 07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 13:00], WEDNESDAY=[06:00, 07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 13:00], MONDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], TUESDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], FRIDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00]}
+2023-11-21 22:58:17,006 INFO i.w.Staff [main] Staff helping today: Leila
+2023-11-21 22:58:17,012 INFO i.w.Staff [main] Patient Bob has been assigned to Leila on [TUESDAY, 16:00]
+2023-11-21 22:58:17,012 INFO i.w.Staff [main] Patient Bob has been removed from Leila on [TUESDAY, 16:00]
+2023-11-21 22:58:17,013 INFO i.w.Staff [main] Patient Bob has been assigned to Leila on [MONDAY, 15:00]
+2023-11-21 22:58:17,014 INFO i.w.Staff [main] Dr. Emma's available slots: {MONDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00], TUESDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], SUNDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00]}
+2023-11-21 22:58:17,014 INFO i.w.Staff [main] Status: SICK
+2023-11-21 22:58:17,014 INFO i.w.Staff [main] Healing patient Bob...
+2023-11-21 22:58:17,014 INFO i.w.Staff [main] Prescribing medicine for Bob...
+2023-11-21 22:58:17,014 INFO i.w.Staff [main] Status: HEALTHY
+2023-11-21 22:58:17,014 INFO i.w.Staff [main] Patient Bob has been removed from Leila on [MONDAY, 15:00]
+2023-11-21 22:58:17,016 INFO i.w.Staff [main] Farewell Dr. Emma. It was a pleasure working with you!
+2023-11-21 23:03:09,892 INFO i.w.Staff [main] Hospital: Medicover in Warsaw, Aleje Jerozolimskie 123
+2023-11-21 23:03:09,899 INFO i.w.Staff [main] Dr. John had been hired as a Doctor!
+2023-11-21 23:03:09,899 INFO i.w.Staff [main] Dr. Emma had been hired as a Doctor!
+2023-11-21 23:03:09,899 INFO i.w.Staff [main] Peter had been hired as a Staff!
+2023-11-21 23:03:09,899 INFO i.w.Staff [main] Leila had been hired as a Staff!
+2023-11-21 23:03:09,899 INFO i.w.Staff [main] Dr. Alex had been hired as a Doctor!
+2023-11-21 23:03:09,900 INFO i.w.Staff [main] Dr. John's available slots: {SUNDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], FRIDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], THURSDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], MONDAY=[15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00, 22:00]}
+2023-11-21 23:03:09,900 INFO i.w.Staff [main] Dr. Emma's available slots: {SUNDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], TUESDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], MONDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00]}
+2023-11-21 23:03:09,900 INFO i.w.Staff [main] Dr. Alex's available slots: {FRIDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], SATURDAY=[06:00, 07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 13:00], WEDNESDAY=[06:00, 07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 13:00], TUESDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], MONDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00]}
+2023-11-21 23:03:09,903 INFO i.w.Staff [main] Staff helping today: Peter
+2023-11-21 23:03:09,908 INFO i.w.Staff [main] Patient Bob has been assigned to Peter on [TUESDAY, 16:00]
+2023-11-21 23:03:09,909 INFO i.w.Staff [main] Patient Bob has been removed from Peter on [TUESDAY, 16:00]
+2023-11-21 23:03:09,909 INFO i.w.Staff [main] Patient Bob has been assigned to Peter on [MONDAY, 15:00]
+2023-11-21 23:03:09,909 INFO i.w.Staff [main] Dr. John's available slots: {SUNDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], FRIDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], THURSDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], MONDAY=[16:00, 17:00, 18:00, 19:00, 20:00, 21:00, 22:00]}
+2023-11-21 23:03:09,909 INFO i.w.Staff [main] Status: SICK
+2023-11-21 23:03:09,910 INFO i.w.Staff [main] Healing patient Bob...
+2023-11-21 23:03:09,910 INFO i.w.Staff [main] Prescribing medicine for Bob...
+2023-11-21 23:03:09,910 INFO i.w.Staff [main] Status: HEALTHY
+2023-11-21 23:03:09,910 INFO i.w.Staff [main] Patient Bob has been removed from Peter on [MONDAY, 15:00]
+2023-11-21 23:03:09,910 INFO i.w.Staff [main] Farewell Dr. Emma. It was a pleasure working with you!
+2023-12-19 09:46:28,534 INFO c.s.h.Hospital [main] Hospital: Medicover in Warsaw, Aleje Jerozolimskie 123
+2023-12-19 09:46:28,543 INFO c.s.h.Hospital [main] Dr. John had been hired as a Doctor!
+2023-12-19 09:46:28,543 INFO c.s.h.Hospital [main] Dr. Emma had been hired as a Doctor!
+2023-12-19 09:46:28,543 INFO c.s.h.Hospital [main] Peter had been hired as a Staff!
+2023-12-19 09:46:28,543 INFO c.s.h.Hospital [main] Leila had been hired as a Staff!
+2023-12-19 09:46:28,543 INFO c.s.h.Hospital [main] Dr. Alex had been hired as a Doctor!
+2023-12-19 09:46:28,546 INFO c.s.i.w.Doctor [main] Dr. John's available slots: {SUNDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], MONDAY=[15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00, 22:00], THURSDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], FRIDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00]}
+2023-12-19 09:46:28,547 INFO c.s.i.w.Doctor [main] Dr. Emma's available slots: {SUNDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], MONDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], TUESDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00]}
+2023-12-19 09:46:28,547 INFO c.s.i.w.Doctor [main] Dr. Alex's available slots: {WEDNESDAY=[06:00, 07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 13:00], MONDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00], SATURDAY=[06:00, 07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 13:00], FRIDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], TUESDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00]}
+2023-12-19 09:46:28,548 INFO c.s.Simulation [main] Staff helping today: Peter
+2023-12-19 09:46:28,553 INFO c.s.i.w.Staff [main] Patient Bob has been assigned to Peter on [TUESDAY, 16:00]
+2023-12-19 09:46:28,553 INFO c.s.i.w.Staff [main] Patient Bob has been removed from Peter on [TUESDAY, 16:00]
+2023-12-19 09:46:28,554 INFO c.s.i.w.Staff [main] Patient Bob has been assigned to Peter on [MONDAY, 15:00]
+2023-12-19 09:46:28,554 INFO c.s.i.w.Doctor [main] Dr. Alex's available slots: {WEDNESDAY=[06:00, 07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 13:00], MONDAY=[09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 16:00], SATURDAY=[06:00, 07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 13:00], FRIDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00], TUESDAY=[14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00]}
+2023-12-19 09:46:28,554 INFO c.s.i.w.Doctor [main] Status: SICK
+2023-12-19 09:46:28,554 INFO c.s.i.w.Doctor [main] Healing patient Bob...
+2023-12-19 09:46:28,554 INFO c.s.i.w.Doctor [main] Prescribing medicine for Bob...
+2023-12-19 09:46:28,555 INFO c.s.i.w.Doctor [main] Status: HEALTHY
+2023-12-19 09:46:28,555 INFO c.s.i.w.Staff [main] Patient Bob has been removed from Peter on [MONDAY, 15:00]
+2023-12-19 09:46:28,555 INFO c.s.h.Hospital [main] Farewell Dr. Emma. It was a pleasure working with you!
