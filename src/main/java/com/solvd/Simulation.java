@@ -10,6 +10,11 @@ import com.solvd.custom.enums.DayOfWeek;
 import com.solvd.individuals.workers.WorkingHours;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -148,55 +153,36 @@ public class Simulation {
 
         System.out.println("\n-------- Task 8 -------");
 
-        //Predicate Lambda: Checking for available slots in the doctor's schedule.
-        Predicate<WorkingHours> isSlotAvailable = wh ->
-                wh.getDayOfWeek() == DayOfWeek.TUESDAY && wh.getStartTime().equals(LocalTime.of(16, 0));
+        hospital.lambdaFromFunctionalInterfaces(doctor1, doctor2, doctor3);
+        hospital.callCustomLambda();
 
-        boolean isAvailable = doctor2.getWorkingHoursList().stream().anyMatch(isSlotAvailable);
-        System.out.println("Is slot available on Tuesday at 16:00 for Doctor 2? " + isAvailable);
+        System.out.println("\n-------- Task 9 -------");
+        System.out.println("STREAMING");
+        hospital.streamOperationsExample();
+        System.out.println("REFLECTION");
+        try {
+            // Accessing information about fields
+            Field[] fields = Doctor.class.getDeclaredFields();
+            for (Field field : fields) {
+                int modifiers = field.getModifiers();
+                System.out.println("Field: " + field.getName());
+                System.out.println("Type: " + field.getType().getSimpleName());
+                System.out.println("Modifiers: " + Modifier.toString(modifiers));
+            }
 
-        //Consumer Lambda: Displaying doctor availability.
-        Consumer<WorkingHours> displayAvailability = wh ->
-                System.out.println(doctor1.getName() + " is available on " + wh.getDayOfWeek() +
-                        " from " + wh.getStartTime() + " to " + wh.getEndTime());
+            // Creating object using reflection - Constructor and Method invocation
+            Class<?> doctorClass = Doctor.class;
+            Constructor<?> doctorConstructor = doctorClass.getDeclaredConstructor(String.class, String.class, int.class, Gender.class, String.class, Hospital.class);
+            doctorConstructor.setAccessible(true); // Make it accessible if it's private
+            Doctor newDoctor = (Doctor) doctorConstructor.newInstance("Jane", "Smith", 35, Gender.FEMALE, "DR-0003", hospital);
 
-        System.out.println("Doctor 1's availability:");
-        doctor1.getWorkingHoursList().forEach(displayAvailability);
-
-        //Function Lambda: Mapping doctor details to their names.
-        Function<Staff, String> mapToName = Staff::getName;
-
-        List<String> doctorNames = Arrays.asList(doctor1, doctor2, doctor3).stream()
-                .map(mapToName)
-                .toList();
-
-        System.out.println("Doctor names: " + doctorNames);
-
-        //Supplier Lambda: Creating a new instance of WorkingHours.
-        Supplier<WorkingHours> createWorkingHours = () ->
-                new WorkingHours(DayOfWeek.WEDNESDAY, LocalTime.of(12, 0), LocalTime.of(20, 0));
-
-        WorkingHours newWorkingHours = createWorkingHours.get();
-        System.out.println("Newly created working hours: " + newWorkingHours);
-
-        //Comparator Lambda: Sorting the doctor's available slots.
-        doctor3.getWorkingHoursList().sort(Comparator.comparing(WorkingHours::getDayOfWeek));
-
-        System.out.println("Sorted Doctor 3's available slots:");
-        doctor3.getWorkingHoursList().forEach(System.out::println);
-
-        // Using the filterStaffByGender method to filter staff by gender
-        List<Staff> filteredStaffByGender = CustomLambdaFunctions.filterStaffByGender(
-                hospital.getStaffList(), Gender.MALE);
-        System.out.println("Filtered Staff by Gender (Male): " + filteredStaffByGender);
-
-        // Using the mapStaffNames method to map staff to their names
-        List<String> staffNames = CustomLambdaFunctions.mapStaffNames(hospital.getStaffList());
-        System.out.println("Staff Names: " + staffNames);
-
-        // Using the calculateAverageAge method to calculate the average age of staff
-        double averageAge = CustomLambdaFunctions.calculateAverageAge(hospital.getStaffList());
-        System.out.println("Average Age of Staff: " + averageAge);
+            Method healMethod = doctorClass.getDeclaredMethod("heal", Patient.class);
+            healMethod.setAccessible(true); // Make it accessible if it's private
+            Patient newPatient = new Patient("Alice", "Johnson", 30, Gender.FEMALE, "P-0002");
+            healMethod.invoke(newDoctor, newPatient);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 }
