@@ -17,4 +17,5 @@ public enum Gender {
     public void printLabel() {
         System.out.println("Label: " + label);
     }
+
 }

@@ -28,4 +28,5 @@ public enum DayOfWeek {
     public void printDetails() {
         System.out.println("Name: " + name + ", Is Weekday: " + isWeekday);
     }
+
 }

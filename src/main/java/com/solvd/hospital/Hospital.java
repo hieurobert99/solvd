@@ -1,5 +1,6 @@
 package com.solvd.hospital;
 
+import com.solvd.custom.enums.Gender;
 import com.solvd.custom.interfaces.HospitalInterface;
 import com.solvd.individuals.patients.Patient;
 import com.solvd.individuals.workers.Doctor;

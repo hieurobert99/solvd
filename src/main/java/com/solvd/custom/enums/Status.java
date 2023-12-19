@@ -24,3 +24,4 @@ public enum Status {
         System.out.println("Description: " + description + ", Is Healthy: " + isHealthy);
     }
 }
+
