@@ -4,12 +4,12 @@ import com.solvd.custom.exceptions.HospitalNotFoundException;
 import com.solvd.custom.exceptions.InvalidWorkingHoursException;
 import com.solvd.custom.exceptions.PatientNotAssignedException;
 import com.solvd.custom.exceptions.UnavailableSlotException;
+import com.solvd.custom.interfaces.StaffManagementInterface;
 import com.solvd.hospital.Hospital;
-import com.solvd.individuals.Gender;
+import com.solvd.custom.enums.Gender;
 import com.solvd.individuals.Person;
 import com.solvd.individuals.patients.Patient;
-import com.solvd.individuals.workers.workDays.DayOfWeek;
-import com.solvd.individuals.workers.workDays.WorkingHours;
+import com.solvd.custom.enums.DayOfWeek;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

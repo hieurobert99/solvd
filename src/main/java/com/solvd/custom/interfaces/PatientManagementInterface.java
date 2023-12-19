@@ -1,6 +1,6 @@
-package com.solvd.individuals.patients;
+package com.solvd.custom.interfaces;
 import com.solvd.individuals.workers.Staff;
-import com.solvd.individuals.workers.workDays.DayOfWeek;
+import com.solvd.custom.enums.DayOfWeek;
 
 import java.time.LocalTime;
 public interface PatientManagementInterface {

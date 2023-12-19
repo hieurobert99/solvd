@@ -1,4 +1,6 @@
-package com.solvd.individuals.workers.workDays;
+package com.solvd.individuals.workers;
+
+import com.solvd.custom.enums.DayOfWeek;
 
 import java.time.LocalTime;
 

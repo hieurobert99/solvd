@@ -1,16 +1,27 @@
 package com.solvd;
 
+import com.solvd.custom.lambda.CustomLambdaFunctions;
 import com.solvd.hospital.Hospital;
-import com.solvd.individuals.Gender;
+import com.solvd.custom.enums.Gender;
 import com.solvd.individuals.patients.Patient;
 import com.solvd.individuals.workers.Doctor;
 import com.solvd.individuals.workers.Staff;
-import com.solvd.individuals.workers.workDays.DayOfWeek;
-import com.solvd.individuals.workers.workDays.WorkingHours;
+import com.solvd.custom.enums.DayOfWeek;
+import com.solvd.individuals.workers.WorkingHours;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
+//1. Use at least 5 lambda functions from the java.util.function package.
+//2. Create 3 custom Lambda functions with generics.
+//3. Create 5 complex Enums(with fields, methods, blocks)
 
 public class Simulation {
 
@@ -117,6 +128,7 @@ public class Simulation {
         WorkingHours wh8 = new WorkingHours(DayOfWeek.WEDNESDAY, LocalTime.of(6, 0), LocalTime.of(14, 0));
         WorkingHours wh9 = new WorkingHours(DayOfWeek.SATURDAY, LocalTime.of(6, 0), LocalTime.of(14, 0));
 
+
         doctor1.addWorkingHours(wh7, wh3, wh4, wh5);
         doctor2.addWorkingHours(wh1, wh2, wh5);
         doctor3.addWorkingHours(wh1, wh4, wh6, wh8, wh9);
@@ -134,9 +146,57 @@ public class Simulation {
         System.out.println("\n-------- Dr. Emma retires -------");
         hospital.fireStaff(doctor2);
 
+        System.out.println("\n-------- Task 8 -------");
 
+        //Predicate Lambda: Checking for available slots in the doctor's schedule.
+        Predicate<WorkingHours> isSlotAvailable = wh ->
+                wh.getDayOfWeek() == DayOfWeek.TUESDAY && wh.getStartTime().equals(LocalTime.of(16, 0));
 
+        boolean isAvailable = doctor2.getWorkingHoursList().stream().anyMatch(isSlotAvailable);
+        System.out.println("Is slot available on Tuesday at 16:00 for Doctor 2? " + isAvailable);
 
+        //Consumer Lambda: Displaying doctor availability.
+        Consumer<WorkingHours> displayAvailability = wh ->
+                System.out.println(doctor1.getName() + " is available on " + wh.getDayOfWeek() +
+                        " from " + wh.getStartTime() + " to " + wh.getEndTime());
+
+        System.out.println("Doctor 1's availability:");
+        doctor1.getWorkingHoursList().forEach(displayAvailability);
+
+        //Function Lambda: Mapping doctor details to their names.
+        Function<Staff, String> mapToName = Staff::getName;
+
+        List<String> doctorNames = Arrays.asList(doctor1, doctor2, doctor3).stream()
+                .map(mapToName)
+                .toList();
+
+        System.out.println("Doctor names: " + doctorNames);
+
+        //Supplier Lambda: Creating a new instance of WorkingHours.
+        Supplier<WorkingHours> createWorkingHours = () ->
+                new WorkingHours(DayOfWeek.WEDNESDAY, LocalTime.of(12, 0), LocalTime.of(20, 0));
+
+        WorkingHours newWorkingHours = createWorkingHours.get();
+        System.out.println("Newly created working hours: " + newWorkingHours);
+
+        //Comparator Lambda: Sorting the doctor's available slots.
+        doctor3.getWorkingHoursList().sort(Comparator.comparing(WorkingHours::getDayOfWeek));
+
+        System.out.println("Sorted Doctor 3's available slots:");
+        doctor3.getWorkingHoursList().forEach(System.out::println);
+
+        // Using the filterStaffByGender method to filter staff by gender
+        List<Staff> filteredStaffByGender = CustomLambdaFunctions.filterStaffByGender(
+                hospital.getStaffList(), Gender.MALE);
+        System.out.println("Filtered Staff by Gender (Male): " + filteredStaffByGender);
+
+        // Using the mapStaffNames method to map staff to their names
+        List<String> staffNames = CustomLambdaFunctions.mapStaffNames(hospital.getStaffList());
+        System.out.println("Staff Names: " + staffNames);
+
+        // Using the calculateAverageAge method to calculate the average age of staff
+        double averageAge = CustomLambdaFunctions.calculateAverageAge(hospital.getStaffList());
+        System.out.println("Average Age of Staff: " + averageAge);
 
     }
 }

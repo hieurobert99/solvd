@@ -1,4 +1,4 @@
-package com.solvd.individuals.workers;
+package com.solvd.custom.interfaces;
 
 import com.solvd.individuals.patients.Patient;
 

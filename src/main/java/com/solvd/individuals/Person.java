@@ -1,5 +1,7 @@
 package com.solvd.individuals;
 
+import com.solvd.custom.enums.Gender;
+
 public abstract class Person {
     private final String name;
     private final String surname;
@@ -21,6 +23,13 @@ public abstract class Person {
         return surname;
     }
 
+    public Gender getGender() {
+        return gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
     public void setAge(int age) {
         this.age = age;
     }

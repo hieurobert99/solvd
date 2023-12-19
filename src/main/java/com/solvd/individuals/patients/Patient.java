@@ -1,11 +1,13 @@
 package com.solvd.individuals.patients;
 
-import com.solvd.individuals.Gender;
+import com.solvd.custom.enums.Status;
+import com.solvd.custom.interfaces.PatientManagementInterface;
+import com.solvd.custom.enums.Gender;
 import com.solvd.individuals.Person;
 
 import com.solvd.individuals.workers.Doctor;
 import com.solvd.individuals.workers.Staff;
-import com.solvd.individuals.workers.workDays.DayOfWeek;
+import com.solvd.custom.enums.DayOfWeek;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
