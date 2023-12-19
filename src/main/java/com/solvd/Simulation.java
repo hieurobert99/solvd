@@ -21,7 +21,7 @@ public class Simulation {
         Staff staff = hospital.callStaff();
 
         if (staff!=null){
-            System.out.println("task-6");
+            System.out.println("task-7");
             logger.info("Staff helping today: " + staff.getName());
             staff.welcome();
             patient.bookAppointment(staff, dayOfWeek, localTime); //adds patient to random doctor
