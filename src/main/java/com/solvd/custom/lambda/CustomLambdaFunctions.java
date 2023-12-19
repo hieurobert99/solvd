@@ -27,4 +27,6 @@ public class CustomLambdaFunctions {
         ToDoubleFunction<Staff> toDoubleAge = staff -> staff.getAge();
         return staffList.stream().collect(Collectors.averagingDouble(toDoubleAge));
     }
+
+
 }
