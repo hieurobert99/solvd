@@ -1,4 +1,4 @@
-package com.solvd.hospital;
+package com.solvd.custom.interfaces;
 
 import com.solvd.individuals.workers.Staff;
 

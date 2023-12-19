@@ -1,7 +1,7 @@
-package com.solvd.individuals.workers;
+package com.solvd.custom.interfaces;
 
 import com.solvd.individuals.patients.Patient;
-import com.solvd.individuals.workers.workDays.DayOfWeek;
+import com.solvd.custom.enums.DayOfWeek;
 
 
 import java.time.LocalTime;

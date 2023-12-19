@@ -1,9 +1,10 @@
 package com.solvd.hospital;
 
+import com.solvd.custom.interfaces.HospitalInterface;
 import com.solvd.individuals.patients.Patient;
 import com.solvd.individuals.workers.Doctor;
 import com.solvd.individuals.workers.Staff;
-import com.solvd.individuals.workers.workDays.DayOfWeek;
+import com.solvd.custom.enums.DayOfWeek;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,6 +25,10 @@ public final class Hospital extends Building implements HospitalInterface {
     public Hospital(String name, String city, String address) {
         super(name, city, address);
         logger.info("Hospital: " + this);
+    }
+
+    public List<Staff> getStaffList() {
+        return staffList;
     }
 
     @Override

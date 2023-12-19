@@ -1,15 +1,15 @@
 package com.solvd.individuals.workers;//Represents a doctor working within a department.
 //Contains attributes such as the doctor's name and specialization.
 //Inherits from the Department class, so it also has the attributes of the Department and hospital.Hospital classes.
+import com.solvd.custom.interfaces.DoctorManagementInterface;
 import com.solvd.hospital.Hospital;
 import java.time.LocalTime;
 import java.util.*;
 
-import com.solvd.individuals.Gender;
+import com.solvd.custom.enums.Gender;
 import com.solvd.individuals.patients.Patient;
-import com.solvd.individuals.patients.Status;
-import com.solvd.individuals.workers.workDays.DayOfWeek;
-import com.solvd.individuals.workers.workDays.WorkingHours;
+import com.solvd.custom.enums.Status;
+import com.solvd.custom.enums.DayOfWeek;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
